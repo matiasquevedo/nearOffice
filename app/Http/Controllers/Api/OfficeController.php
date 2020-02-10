@@ -16,6 +16,9 @@ class OfficeController extends Controller
     public function index()
     {
         //
+        $offices = Office::orderBy('id','DESC')->get();
+        $json = json_decode($offices,true);
+        return response()->json(array('result'=>$json));
     }
 
     /**
