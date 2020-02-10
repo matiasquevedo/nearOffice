@@ -81,14 +81,15 @@
     <script src=" {{asset('plugins/jquery/jquery-3.4.1.js')}} " ></script>
     <script src=" {{asset('plugins/popper/popper.min.js')}} " ></script>
     <script src="{{asset('plugins/bootstrap-4.4.1/dist/js/bootstrap.js')}}"></script>
+    
+    <script src="{{asset('plugins/leaflet/leaflet.js')}}"></script>
+    <script src="{{asset('plugins/leaflet-geocoder/dist/Control.Geocoder.js')}}"></script>      
+    <script src="{{asset('plugins/leaflet-fullscreen/dist/leaflet.fullscreen.js')}}"></script>
+
     <script src=" {{asset('plugins/fontawesome-5.11.2/js/all.js')}} "></script>
     <script src="{{asset('plugins/trumbowyg-master/dist/trumbowyg.min.js')}}"></script>
     <script src="{{asset('plugins/trumbowyg-master/dist/plugins/table/trumbowyg.table.min.js')}}"></script>
-    <script src="{{asset('plugins/fullcalendar/lib/moment.min.js')}}"></script>
-    <script src="{{asset('plugins/fullcalendar/fullcalendar.min.js')}}"></script>
-    <script src="{{asset('plugins/fullcalendar/locale/es.js')}}"></script>
-    <script src="{{asset('plugins/lightbox/dist/ekko-lightbox.min.js')}}"></script>
-    <script src="{{asset('plugins/chosen-v1.8.7/chosen.jquery.min.js')}}"></script>
+    
     <script type="text/javascript">
         $(document).ready(function () {
             $('#sidebarCollapse').on('click', function () {

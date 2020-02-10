@@ -35,38 +35,12 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']], function(){
 		'as'=>'user.destroy'
 	]);
 
-	Route::resource('page','PageController');
-	Route::get('page/{slug}/delete',[
-		'uses'=>'PageController@destroy',
-		'as'=>'pages.destroy'
-	]);
-	Route::get('page/{slug}/post',[
-		'uses'=>'PageController@post',
-		'as'=>'page.post'
-	]);
-	Route::get('page/{slug}/unpost',[
-		'uses'=>'PageController@unpost',
-		'as'=>'page.unpost'
+	Route::resource('office','OfficeController');
+	Route::get('offices/{id}/delete',[
+		'uses'=>'OfficeController@destroy',
+		'as'=>'offices.destroy'
 	]);
 
-	Route::resource('event','EventController');
-	Route::get('event/{slug}/delete',[
-		'uses'=>'EventController@destroy',
-		'as'=>'events.destroy'
-	]);
-	Route::get('event/{slug}/post',[
-		'uses'=>'EventController@post',
-		'as'=>'event.post'
-	]);
-	Route::get('event/{slug}/unpost',[
-		'uses'=>'EventController@unpost',
-		'as'=>'event.unpost'
-	]);
-
-	Route::get('events/calendario',[
-		'uses'=>'EventController@indexCalendar',
-		'as'=>'events.calendar'
-	]);
 
 	Route::resource('album','AlbumController');
 	Route::get('album/{slug}/delete',[
@@ -92,45 +66,6 @@ Route::group(['prefix'=>'admin','middleware'=>['auth','admin']], function(){
 		'as'=>'album.indexPic'
 	]);
 
-	Route::resource('cielo/mes','MonthController');
-	Route::get('mes/{slug}/delete',[
-		'uses'=>'MonthController@destroy',
-		'as'=>'mes.destroy'
-	]);
-	Route::get('mes/{slug}/post',[
-		'uses'=>'MonthController@post',
-		'as'=>'mes.post'
-	]);
-	Route::get('mes/{slug}/unpost',[
-		'uses'=>'MonthController@unpost',
-		'as'=>'mes.unpost'
-	]);
-
-	Route::get('mes/{slug}/prevista',[
-		'uses'=>'MonthController@showPreview',
-		'as'=>'mes.preview'
-	]);
-
-	Route::resource('menu','MenuController');
-	Route::resource('category','CategoryController');
-	Route::get('category/{slug}/delete',[
-		'uses'=>'CategoryController@destroy',
-		'as'=>'categories.destroy'
-	]);
-
-	Route::resource('entry','EntryController');
-	Route::get('entry/{slug}/post',[
-		'uses'=>'EntryController@post',
-		'as'=>'entry.post'
-	]);
-	Route::get('entry/{slug}/unpost',[
-		'uses'=>'EntryController@unpost',
-		'as'=>'entry.unpost'
-	]);
-	Route::get('entry/{slug}/delete',[
-		'uses'=>'EntryController@destroy',
-		'as'=>'entries.destroy'
-	]);	
 
 
 });

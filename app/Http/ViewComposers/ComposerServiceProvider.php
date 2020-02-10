@@ -22,7 +22,6 @@ class ComposerServiceProvider extends ServiceProvider
 
         view()->composer('layouts.nav', function ($view) {
             //
-            $pages = Page::where('state','1')->where('nav','1')->get();
             $principal = Menus::where('nav','1')->get()->first();
             // dd($principal);
             // dd($pages);
@@ -36,7 +35,7 @@ class ComposerServiceProvider extends ServiceProvider
             // dd($public_menu);
             // $routes = \Artisan::call('route:list');
             // dd($routes);
-            $view->with("pages",$pages)->with("public_menu",$public_menu);
+            $view->with("public_menu",$public_menu);
         });
     }
 

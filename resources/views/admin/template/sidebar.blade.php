@@ -39,48 +39,11 @@
         <li>
             <a href=" {{route('user.index')}} " class="">Usuarios<span class="float-right badge badge-primary">{{ \App\User::count() }}</span></a>
         </li>
-        <li>
-            <a href="{{route('page.index')}}" class="">Secciones<span class="float-right badge badge-primary">{{ \App\Page::count() }}</span></a>
-        </li>
-        <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Blog <span class="float-right badge badge-primary">{{ \App\Entry::count() }}</span></a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="{{route('category.index')}}" class="">Categorias</a>
-                </li>
-                <li>
-                    <a href="{{route('entry.index')}}" class="">Entradas</a>
-                </li>
-                <li>
-                    <a href="{{route('entry.create')}}" class="">Nueva Entrada</a>
-                </li>
-            </ul>
-        </li>
-
-        <li>
-            <a href="{{route('menu.index')}}" class="">Menus<span class="float-right badge badge-primary">{{ count(DB::table('menus')->get())}}</span></a>
-            
-        </li>
+        
 
         
         <li>
-            <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Eventos<span class="float-right badge badge-primary">{{ \App\Event::count() }}</span></a>
-            <ul class="collapse list-unstyled" id="pageSubmenu">
-                <li>
-                    <a href="{{route('events.calendar')}}" class="">Calendario</a>
-                </li>
-                <li>
-                    <a href="{{route('event.index')}}" class="">Lista</a>
-                </li>
-            </ul>
-        </li>
-        <li>
-            <a href="{{route('album.index')}}" class="">Albumes<span class="float-right badge badge-primary">{{ \App\Album::count() }}</span></a>
-        </li>
-
-        
-        <li>
-            <a href="{{route('mes.index')}}" class="">Cielo del Mes</a>
+            <a href="{{route('office.index')}}" class="">Oficinas</a>
         </li>
     </ul>
 
